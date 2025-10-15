@@ -1,0 +1,24 @@
+Q: minimum salary
+A: CSV `employees.csv` — Lowest EMPLOYEE_ID:  (100)
+
+CSV `employees.csv` — Lowest SALARY:  (2100)
+
+CSV `employees.csv` — Lowest DEPARTMENT_ID:  (10)
+Sources:
+ - employees.csv (page: None) snippet: {'EMPLOYEE_ID': 100, 'FIRST_NAME': 'Steven', 'LAST_NAME': 'King', 'EMAIL': 'SKING', 'PHONE_NUMBER': '515.123.4567', 'HIRE_DATE': '17-JUN-03', 'JOB_ID': 'AD_PRES', 'SALARY': 24000, 'COMMISSION_PCT': ' - ', 'MANAGER_ID': ' - ', 'DEPARTMENT_ID': 90}
+ - employees.csv (page: None) snippet: {'EMPLOYEE_ID': 132, 'FIRST_NAME': 'TJ', 'LAST_NAME': 'Olson', 'EMAIL': 'TJOLSON', 'PHONE_NUMBER': '650.124.8234', 'HIRE_DATE': '10-APR-07', 'JOB_ID': 'ST_CLERK', 'SALARY': 2100, 'COMMISSION_PCT': ' - ', 'MANAGER_ID': '121', 'DEPARTMENT_ID': 50}
+ - employees.csv (page: None) snippet: {'EMPLOYEE_ID': 200, 'FIRST_NAME': 'Jennifer', 'LAST_NAME': 'Whalen', 'EMAIL': 'JWHALEN', 'PHONE_NUMBER': '515.123.4444', 'HIRE_DATE': '17-SEP-03', 'JOB_ID': 'AD_ASST', 'SALARY': 4400, 'COMMISSION_PCT': ' - ', 'MANAGER_ID': '101', 'DEPARTMENT_ID': 10}
+
+
+Q: Highest salary
+A: CSV `employees.csv` — Highest EMPLOYEE_ID: 206 (206)
+
+CSV `employees.csv` — Highest SALARY: 100 (24000)
+
+CSV `employees.csv` — Highest DEPARTMENT_ID: 205 (110)
+Sources:
+ - employees.csv (page: None) snippet: {'EMPLOYEE_ID': 206, 'FIRST_NAME': 'William', 'LAST_NAME': 'Gietz', 'EMAIL': 'WGIETZ', 'PHONE_NUMBER': '515.123.8181', 'HIRE_DATE': '07-JUN-02', 'JOB_ID': 'AC_ACCOUNT', 'SALARY': 8300, 'COMMISSION_PCT': ' - ', 'MANAGER_ID': '205', 'DEPARTMENT_ID': 110}
+ - employees.csv (page: None) snippet: {'EMPLOYEE_ID': 100, 'FIRST_NAME': 'Steven', 'LAST_NAME': 'King', 'EMAIL': 'SKING', 'PHONE_NUMBER': '515.123.4567', 'HIRE_DATE': '17-JUN-03', 'JOB_ID': 'AD_PRES', 'SALARY': 24000, 'COMMISSION_PCT': ' - ', 'MANAGER_ID': ' - ', 'DEPARTMENT_ID': 90}
+ - employees.csv (page: None) snippet: {'EMPLOYEE_ID': 205, 'FIRST_NAME': 'Shelley', 'LAST_NAME': 'Higgins', 'EMAIL': 'SHIGGINS', 'PHONE_NUMBER': '515.123.8080', 'HIRE_DATE': '07-JUN-02', 'JOB_ID': 'AC_MGR', 'SALARY': 12008, 'COMMISSION_PCT': ' - ', 'MANAGER_ID': '101', 'DEPARTMENT_ID': 110}
+
+

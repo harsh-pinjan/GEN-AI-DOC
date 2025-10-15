@@ -1,0 +1,19 @@
+
+1
+
+Automatic Zoom
+Introduction to Artificial Intelligence (AI):
+Artificial Intelligence (AI) is the simulation of human intelligence processes by machines, especially
+computer systems. 
+AI applications include natural language processing, machine learning, computer vision, and
+robotics.
+Machine Learning (ML):
+Machine  Learning  is  a  subset  of  AI  that  focuses  on  developing  algorithms  that  allow  computers  to
+learn from and make predictions or decisions based on data.
+Supervised learning, unsupervised learning, and reinforcement learning are common types of ML.
+Natural Language Processing (NLP):
+NLP  is  a  field  of  AI  that  gives  machines  the  ability  to  read,  understand,  and  derive  meaning  from
+human languages. Applications include chatbots, translation, and sentiment analysis.
+Robotics:
+Robotics  integrates  AI  to  create  intelligent  machines  that  can  perform  tasks  in  the  real  world,  from
+industrial automation to healthcare assistance.
