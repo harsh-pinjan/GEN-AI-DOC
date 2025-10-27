@@ -19,7 +19,7 @@ def extract_text_from_pdf(path: str) -> str:
     text = []
     for p, page in enumerate(reader.pages):
         page_text = page.extract_text() or ""
-        # keep basic page metadata by inserting marker
+       
         text.append(f"\n\n<Page {p+1}>\n{page_text}")
     return "\n".join(text)
 
@@ -27,13 +27,13 @@ def chunk_text(text: str, chunk_size: int = 1000, chunk_overlap: int = 150) -> L
     splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
     texts = splitter.split_text(text)
     docs = []
-    # try to preserve page markers in metadata
+    
     for t in texts:
-        # naive page extraction from marker
+        
         page = None
         marker_idx = t.find("<Page")
         if marker_idx != -1:
-            # try to parse page number
+          
             import re
             m = re.search(r"<Page\s+(\d+)>", t)
             if m:
@@ -51,7 +51,7 @@ def build_embeddings_and_faiss(docs: List[Document], persist_directory: str) -> 
 
 def load_faiss(persist_directory: str) -> FAISS:
     emb = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
-    # allow dangerous deserialization if index was created locally (explicitly set by you)
+   
     vector_store = FAISS.load_local(persist_directory, emb, allow_dangerous_deserialization=True)
     return vector_store
 
@@ -75,9 +75,7 @@ def csv_lowest(df: pd.DataFrame, col: str) -> Tuple[dict, pd.Series]:
 def csv_average(df: pd.DataFrame, col: str) -> float:
     return float(df[col].mean())
 
-# -------------------------
-# Chart utilities (matplotlib -> PNG bytes)
-# -------------------------
+
 def plot_histogram(df: pd.DataFrame, col: str, title: Optional[str] = None) -> bytes:
     fig, ax = plt.subplots()
     ax.hist(df[col].dropna(), bins=20)
@@ -104,9 +102,7 @@ def plot_bar_by_group(df: pd.DataFrame, numeric_col: str, group_col: str, title:
     buf.seek(0)
     return buf.getvalue()
 
-# -------------------------
-# Helpers
-# -------------------------
+
 def file_hash_bytes(file_bytes: bytes) -> str:
     return hashlib.md5(file_bytes).hexdigest()
 
@@ -114,9 +110,7 @@ def docs_to_single_hash(docs: List[Document]) -> str:
     joined = "".join([d.page_content for d in docs])
     return hashlib.md5(joined.encode()).hexdigest()
 
-# -------------------------
-# Exports
-# -------------------------
+
 def export_history_to_csv(history: List[dict], out_path: str):
     rows = []
     for item in history:
