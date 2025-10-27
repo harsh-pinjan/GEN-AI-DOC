@@ -5,13 +5,13 @@ def create_faiss_vector_store(chunks, persist_directory="faiss_index"):
     """
     Takes document chunks, creates embeddings, and stores in FAISS
     """
-    # Use HuggingFace embeddings instead of OpenAI
+
     embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
-    # Create FAISS vector store from chunks
+    
     vector_store = FAISS.from_documents(chunks, embeddings)
 
-    # Save to disk
+   
     vector_store.save_local(persist_directory)
     print(f"FAISS vector store created and saved at {persist_directory}")
     
